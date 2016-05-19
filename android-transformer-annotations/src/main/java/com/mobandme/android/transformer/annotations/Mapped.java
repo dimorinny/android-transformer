@@ -14,7 +14,7 @@
  * limitations under the License. 
  */
 
-package com.mobandme.android.transformer.compiler;
+package com.mobandme.android.transformer.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

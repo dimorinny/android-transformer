@@ -22,37 +22,23 @@
  *
  * Contact: Txus Ballesteros <txus.ballesteros@gmail.com>
  */
-package com.mobandme.sample.app.model;
 
-import com.mobandme.android.transformer.compiler.Mappable;
-import com.mobandme.android.transformer.compiler.Mapped;
-import com.mobandme.sample.app.domain.HomeColor;
+package com.mobandme.android.transformer.annotations;
 
-@Mappable( with = HomeColor.class)
-public class HomeColorModel {
-    @Mapped private String colorName;
-    @Mapped private String colorHex;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
-    public String getColorName() {
-        return colorName;
-    }
+/**
+ * Use this annotation to configure the custom data parser.
+ */
 
-    public void setColorName(String colorName) {
-        this.colorName = colorName;
-    }
-
-    public String getColorHex() {
-        return colorHex;
-    }
-
-    public void setColorHex(String colorHex) {
-        this.colorHex = colorHex;
-    }
-
-    @Override public String toString() {
-        return "HomeColorModel{" +
-                "colorName='" + colorName + '\'' +
-                ", colorHex='" + colorHex + '\'' +
-                '}';
-    }
+@Target(ElementType.FIELD)
+@Retention(RetentionPolicy.SOURCE)
+public @interface Parse {
+    
+    public Class<?> originToDestinationWith();
+    
+    public Class<?> destinationToOriginWith();
 }

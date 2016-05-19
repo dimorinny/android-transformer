@@ -27,8 +27,7 @@ package com.mobandme.sample.app;
 import com.mobandme.android.transformer.Transformer;
 import com.mobandme.sample.app.domain.Home;
 import com.mobandme.sample.app.domain.HomeColor;
-import com.mobandme.sample.app.model.HomeColorModel;
-import com.mobandme.sample.app.model.HomeModel;
+
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;

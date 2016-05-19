@@ -23,11 +23,11 @@
  * Contact: Txus Ballesteros <txus.ballesteros@gmail.com>
  */
 
-package com.mobandme.android.transformer.compiler.internal;
+package com.mobandme.android.transformer.compiler;
 
-import com.mobandme.android.transformer.compiler.Mappable;
-import com.mobandme.android.transformer.compiler.Mapped;
-import com.mobandme.android.transformer.compiler.Parse;
+import com.mobandme.android.transformer.annotations.Mappable;
+import com.mobandme.android.transformer.annotations.Mapped;
+import com.mobandme.android.transformer.annotations.Parse;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -56,12 +56,11 @@ import javax.lang.model.util.Types;
 import javax.tools.Diagnostic;
 import javax.tools.JavaFileObject;
 
-
 @SupportedSourceVersion(SourceVersion.RELEASE_7)
 @SupportedAnnotationTypes({
-        "com.mobandme.android.transformer.compiler.Mapping",
-        "com.mobandme.android.transformer.compiler.Mappable",
-        "com.mobandme.android.transformer.compiler.Parse"
+        "com.mobandme.android.transformer.annotations.Mapped",
+        "com.mobandme.android.transformer.annotations.Mappable",
+        "com.mobandme.android.transformer.annotations.Parse"
 })
 public class AnnotationsProcessor extends AbstractProcessor {
 

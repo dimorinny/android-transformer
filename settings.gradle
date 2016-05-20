@@ -1,1 +1,1 @@
-include ':android-transformer-sample', ':android-transformer', ':android-transformer-compiler', ':android-transformer-annotations'
+include ':android-transformer-sample', ':android-transformer', ':android-transformer-compiler', ':android-transformer-annotations', ':android-transformer-sample-kotlin'
